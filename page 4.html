@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Web Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Container to wrap everything -->
+        <div id="container">
+            <header style="font-size: 60px; color: antiquewhite;">My Web Site Brand</header>
+            <!-- Begin Main Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="Index.html"></a>Home</li>
+                    <li><a href="page2.html"></a>About</li>
+                    <li>Gallery</li>
+                    <li><a href="page3.html"></a>Contact</li>
+                </ul>
+            </nav>
+            <!-- End Main Navigation -->
+             <!-- Begin Main Content -->
+            <main>
+                <h1>My Third Heading</h1>
+                <p>My Third paragraph.</p><br>
+            </main>
+            <!-- End Main Content -->
+        </div>
+        <!-- End Container -->
+    <!-- Footer Information -->
+    <footer>&copy; Copyright 2025</footer>
+    <script>
+        var photos = [];
+        var fileNames = [];
+        var imageList = [];
+        var image = [];
+        var openList = "<li id='photo'>";
+        var closeList = "</li>";
+        for (var i=0; i<6; i++) {
+            fileNames.push("winterland"+(i+1));
+            photos.push("<img src='images/"+fileNames[i]+".jpg'>");
+            image = openList + photos[i] + closeList;
+            imageList.push(image);
+        }
+        document.getElementById("album").innerHTML = imageList;
+    </script>
+</body>
+</html>
