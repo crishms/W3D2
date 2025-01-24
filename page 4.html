@@ -20,8 +20,9 @@
             <!-- End Main Navigation -->
              <!-- Begin Main Content -->
             <main>
-                <h1>My Third Heading</h1>
-                <p>My Third paragraph.</p><br>
+                <h1>My Fourth Heading</h1>
+                <p>My Fourth paragraph.</p><br>
+                <ul id="album"></ul>
             </main>
             <!-- End Main Content -->
         </div>
@@ -35,12 +36,14 @@
         var image = [];
         var openList = "<li id='photo'>";
         var closeList = "</li>";
+
         for (var i=0; i<6; i++) {
             fileNames.push("winterland"+(i+1));
             photos.push("<img src='images/"+fileNames[i]+".jpg'>");
             image = openList + photos[i] + closeList;
             imageList.push(image);
         }
+
         document.getElementById("album").innerHTML = imageList;
     </script>
 </body>
